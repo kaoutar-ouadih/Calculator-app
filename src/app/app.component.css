@@ -1,0 +1,167 @@
+:root{
+    /* Backgrounds */
+
+    --Very-dark-desaturated-blue-main-background: hsl(222, 26%, 31%);
+    --Very-dark-desaturated-blue-toggle-background: hsl(223, 31%, 20%);
+    --Very-dark-desaturated-blue: hsl(224, 36%, 15%);
+
+    /* Keys */
+
+    --Desaturated-dark-blue-key-background: hsl(225, 21%, 49%);
+    --Desaturated-dark-blue-key-shadow: hsl(224, 28%, 35%);
+    --Desaturated-dark-blue-key-hover: #A2B2E1;
+
+    --Red-key-background-toggle: hsl(6, 63%, 50%);
+    --Dark-red-key-shadow: hsl(6, 70%, 34%);
+
+    --Light-grayish-orange-key-background: hsl(30, 25%, 89%);
+    --Grayish-orange-key-shadow: hsl(28, 16%, 65%);
+
+    /* Text */
+
+    --Very-dark-grayish-blue: hsl(221, 14%, 31%);
+    --White: hsl(0, 0%, 100%);
+}
+main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Very-dark-desaturated-blue-main-background);
+}
+.calc-header, .calc-body, .calc-display{
+    width: 25%;
+    min-width: 300px;
+}
+.calc-header{
+    color: var(--White);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.calc-header h3{
+    font-size: 1.5rem;
+}
+.calc-header span{
+    font-size: 0.7rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.calc-display{
+    background-color: var(--Very-dark-desaturated-blue);
+    color: var(--White);
+    padding: 0.8em 0.5em;
+    border-radius: 5px;
+    margin: 0.6em 0 0.5em;
+}
+.calc-display span{
+    float: right;
+}
+.calc-body{
+    display: grid;
+    grid-template-areas: 
+        "SEVEN EIGHT NINE DEL"
+        "FOUR FIVE SIX PLUS"
+        "ONE TWO THREE MINUS"
+        "POINT ZERO DIVISION MULTIPLICATION"
+        "RESET RESET EQUALS EQUALS";
+    background-color: var(--Very-dark-desaturated-blue-toggle-background);
+    padding: 0.5em;
+    gap: 0.5em;
+}
+.calc-body div{
+     width: 100%; 
+}
+.btn{
+    background-color: var(--Light-grayish-orange-key-background);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    box-shadow: 0px 3px 0px 0px var(--Grayish-orange-key-shadow);
+    cursor: pointer;
+    color: var(--Very-dark-grayish-blue);
+    padding: 0.3em;
+}
+.btn:hover{
+    background-color: var(--White);
+}
+.btn-0{
+     grid-area: ZERO;
+}
+.btn-1{
+    grid-area: ONE;
+}
+.btn-2{
+    grid-area: TWO;
+}
+.btn-3{
+    grid-area: THREE;
+}
+.btn-4{
+    grid-area: FOUR;
+}
+.btn-5{
+    grid-area: FIVE;
+}
+.btn-6{
+    grid-area: SIX;
+}
+.btn-7{
+    grid-area: SEVEN;
+}
+.btn-8{
+    grid-area: EIGHT;
+}
+.btn-9{
+    grid-area: NINE;
+}
+.btn-Minus{
+    grid-area: MINUS;
+}
+.btn-Plus{
+    grid-area: PLUS;
+}
+.btn-Point{
+    grid-area: POINT;
+}
+.btn-Division{
+    grid-area: DIVISION;
+      }
+.btn-Multiplication{
+    grid-area: MULTIPLICATION;
+      }
+.btn-RESET{
+    grid-area: RESET;
+    background-color: var(--Desaturated-dark-blue-key-background);
+    box-shadow: 0px 3px 0px 0px var(--Desaturated-dark-blue-key-shadow);
+    color: var(--White);
+    font-weight: 600;
+    font-size: 1.5rem;
+    }
+.btn-RESET:hover{
+        background-color: var(--Desaturated-dark-blue-key-hover);
+    }
+.btn-Equals{
+    grid-area: EQUALS;
+    background-color: var(--Red-key-background-toggle);
+    box-shadow: 0px 3px 0px 0px var(--Dark-red-key-shadow);
+    color: var(--White);
+    }
+.btn-Equals:hover{
+    background-color: var(--Dark-red-key-hover);
+    }
+.btn-DEL{
+    grid-area: DEL;
+    background-color: var(--Desaturated-dark-blue-key-background);
+    box-shadow: 0px 3px 0px 0px var(--Desaturated-dark-blue-key-shadow);
+    color: var(--White);
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+.btn-DEL:hover{
+    background-color: var(--Desaturated-dark-blue-key-hover);
+}
